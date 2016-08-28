@@ -52,3 +52,11 @@ gem 'rails_12factor', group: :production
 gem 'carrierwave'
 
 gem 'cloudinary'
+
+group :test, :development do
+  gem "rspec-rails"
+end
+
+group :test do
+  gem "capybara"
+end

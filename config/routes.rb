@@ -2,7 +2,15 @@ Rails.application.routes.draw do
 
   root "artists#index"
 
-  get "artists" => "artists#index"
-  get "artists/:id" => "artists#show", as: :artist
+ resources :artists do
+   resources :songs do
+     collection do
+       get 'remove_all'
+     end
+   end
+ end
+
+post 'artists/:id' => "artists#destroy_all"
+
 
 end

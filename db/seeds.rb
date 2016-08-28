@@ -1,14 +1,14 @@
-Artist.delete_all
 Song.delete_all
+Artist.delete_all
 
-virus = Song.create(  song: "The Virus"  )
-lights = Song.create(  song: "Lights Please"  )
-wanna = Song.create(  song: "Wanna Be Hard"  )
-no = Song.create(  song: "No. 99"  )
-cry = Song.create(  song: "Song Cry"  )
+tech = Artist.create( name: "Tech N9ne", remote_image_url: "https://cdn1-strangemusicinc.netdna-ssl.com/wp-content/uploads/2011/01/Tech-N9ne-Sickology-101.jpg" )
+cole = Artist.create( name: "J. Cole", remote_image_url: "http://www.puna.nl/wp-content/uploads/2015/12/J.-Cole-Homecoming-LYFSTYL.jpg" )
+kendrick = Artist.create( name: "Kendrick Lamar", remote_image_url: "https://consequenceofsound.files.wordpress.com/2013/08/kendrick-lamar-king.png" )
+joey = Artist.create( name: "Joey Bada$$", remote_image_url: "http://photon.hypb.st/hypetrak.com/images/2015/06/joey-bada-claims-to-be-the-1-independant-hip-hop-artist-in-the-world.jpg?resize=617,411" )
+jay = Artist.create( name: "Jay-Z", remote_image_url: "https://images.genius.com/0d53c56a247ef39e4106718deb95f347.1000x500x1.jpg" )
 
-Artist.create(  name: "Tech N9ne", song_id: virus  )
-Artist.create(  name: "J. Cole", song_id: lights  )
-Artist.create(  name: "Kendrick Lamar", song_id: wanna  )
-Artist.create(  name: "Joey Bada$$", song_id: no  )
-Artist.create(  name: "Jay-Z", song_id: cry  )
+Song.create({ song: "The Virus", artist: tech })
+Song.create({ song: "Lights Please", artist: cole })
+Song.create({ song: "Wanna Be Hard", artist: kendrick })
+Song.create({ song: "No. 99", artist: joey })
+Song.create({ song: "Song Cry", artist: jay })

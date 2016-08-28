@@ -1,0 +1,10 @@
+<%= form_for([@artist, @song ]), remote: true do |f| %>
+
+  <%= f.label :song %>
+  <%= f.text_field :song %>
+
+  <%= f.hidden_field :artists_id, value: @artists.id %>
+
+  <%= f.submit "Add Song"%>
+
+<%end%>
