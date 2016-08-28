@@ -1,18 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-songs = Song.create( { song: "The Virus" } )
-songs = Song.create( { song: "Lights Please" } )
-songs = Song.create( { song: "Wanna Be Hard" } )
-songs = Song.create( { song: "No. 99" } )
-songs = Song.create( { song: "Song Cry" } )
+Artist.delete_all
+Song.delete_all
 
-artists = Artist.create( { name: "Tech N9ne" } )
-artists = Artist.create( { name: "J. Cole" } )
-artists = Artist.create( { name: "Kendrick Lamar" } )
-artists = Artist.create( { name: "Joey Bada$$" } )
-artists = Artist.create( { name: "Jay-Z" } )
+virus = Song.create(  song: "The Virus"  )
+lights = Song.create(  song: "Lights Please"  )
+wanna = Song.create(  song: "Wanna Be Hard"  )
+no = Song.create(  song: "No. 99"  )
+cry = Song.create(  song: "Song Cry"  )
+
+Artist.create(  name: "Tech N9ne", song_id: virus  )
+Artist.create(  name: "J. Cole", song_id: lights  )
+Artist.create(  name: "Kendrick Lamar", song_id: wanna  )
+Artist.create(  name: "Joey Bada$$", song_id: no  )
+Artist.create(  name: "Jay-Z", song_id: cry  )
