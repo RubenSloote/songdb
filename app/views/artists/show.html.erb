@@ -1,1 +1,13 @@
 <h1><%= @artists.name %></h1>
+
+<ul id="songs">
+<%= render @artists.song %>
+</ul>
+<%= image_tag @artists.image %>
+
+<%= form_for [@artists, @artists.song.new], remote: true do |f| %>
+  <%= f.text_field :song %>
+  <%= f.submit 'Add song' %>
+<% end %>
+
+<%= link_to "Clean up", remove_all_artist_songs_path(@artists), :method => :get %>
