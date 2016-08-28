@@ -3,11 +3,16 @@
 <ul id="songs">
 <%= render @artists.song %>
 </ul>
-<%= image_tag @artists.image %>
 
 <%= form_for [@artists, @artists.song.new], remote: true do |f| %>
   <%= f.text_field :song %>
   <%= f.submit 'Add song' %>
 <% end %>
-
+<br>
+<%= cl_image_tag(@artists.image, :width => 200, :height => 300, :crop => :fill) %>
+<br><br>
 <%= link_to "Clean up", remove_all_artist_songs_path(@artists), :method => :get %>
+
+<br><br>
+
+<%= link_to "Back", root_path %>
