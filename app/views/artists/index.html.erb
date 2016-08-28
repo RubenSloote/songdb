@@ -9,7 +9,7 @@
   <tbody>
     <% @artists.each do |artist| %>
     <tr>
-      <td>><h2><%= link_to artist.name, artist_path(artist.id) %></h2></td>
+      <td><h2><%= link_to artist.name, artist_path(artist.id) %></h2></td>
       <td><%= artist.created_at.strftime "%B %e, %Y" %></td>
     </tr>
     <% end %>
